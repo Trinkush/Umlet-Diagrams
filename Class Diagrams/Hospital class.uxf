@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>10</y>
+      <w>170</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>*Patient*
+--
+Id: string
+Name: string
+Age: int
+Mobile_no: int
+Address: string
+Sex: string
+Appointment_date: date
+--
+Create()
+Pay_bills()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>520</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Staff*
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>480</y>
+      <w>130</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>*Ward*
+--
+Ward_no: int
+No_beds: int
+Ward_name: string
+--
+Bed_status()
+location()
+wing()
+Name()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>520</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*Reports*
+--
+--
+Display_ward_status()
+Display_adds_report()
+Display_patient_info()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>230</y>
+      <w>170</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>*Test Operations*
+--
+Patient_id: string
+Id: string
+flag: int
+--
+Operation_appointment()
+Test_appointment()
+Doctor_appointment()
+Get_test()
+Get_operation()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>0</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*Doctor*
+--
+Id: string
+Doc_name: string
+Department: string
+Specialization: string
+Address: string
+salary: int
+--
+Prescribe_medicines()
+Prescribe_tests()
+check_reports()
+Perform_operation()
+Draw_salary()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>20</y>
+      <w>170</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>*Department*
+--
+Id: string
+Name: string
+Doc_id: string
+--
+Add_department()
+Delete_department()
+Add_doctor()
+Delete_doctor()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>310</y>
+      <w>130</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>*Person*
+--
+Id: int
+Name: int
+Type: string
+--
+Add_person()
+Delete_person()
+Edit_person()
+Draw_salary()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>330</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Registeration*
+--
+--
+Register()
+Alloted()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>520</y>
+      <w>110</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Nurse*
+--
+--
+Ward_Alloted()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>20</y>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*Appointment*
+--
+Date: dt
+time: tm
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>970</x>
+      <y>190</y>
+      <w>150</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+Displays Patient Info</panel_attributes>
+    <additional_attributes>10.0;330.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>530</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+Generates Ward Info</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>390</y>
+      <w>130</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+Allocats Bed</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>190</y>
+      <w>170</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=1
+Patient Registers</panel_attributes>
+    <additional_attributes>10.0;140.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>40</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=1..*
+Takes Appointment</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>530</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+Do Cleaning</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>450</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>450</y>
+      <w>110</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>90</y>
+      <w>70</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>390</y>
+      <w>460</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+Generates Discharge Report</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0;440.0;260.0;440.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>70</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>300</y>
+      <w>140</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>*Bill*
+--
+Bill_no: int
+Patient_name: string
+Amount: int
+--
+Sub_total()
+Total_amount()
+Give_Salary()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>210</y>
+      <w>310</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..1
+teaches to &gt;</panel_attributes>
+    <additional_attributes>10.0;140.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>370</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..1
+teaches to &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>50</x>
+      <y>190</y>
+      <w>930</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+&lt; Pays Bill</panel_attributes>
+    <additional_attributes>10.0;250.0;160.0;310.0;440.0;310.0;560.0;230.0;890.0;230.0;890.0;10.0</additional_attributes>
+  </element>
+</diagram>
